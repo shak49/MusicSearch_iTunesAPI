@@ -27,7 +27,7 @@ class MusicSearch_iTunesAPITests: XCTestCase {
 
     // Shak notes: Functions
     func testValidURL() throws {
-        var url = URL(string: "https://itunes.apple.com/search")
+        let url = URL(string: "https://itunes.apple.com/search?term=musicArtist")
         let expectation = expectation(description: "Status Code 200")
         session?.dataTask(with: url!, completionHandler: { _, response, error in
             if let error = error {
@@ -44,30 +44,17 @@ class MusicSearch_iTunesAPITests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
-    func testURLForFetchFunction() throws {
-        let sourceURL = URLComponents(string: "https://itunes.apple.com/search")
-        let expectation = expectation(description: "Correct URL")
-        let builtURL = urlBuilder.url
-        if builtURL == sourceURL {
-            expectation.fulfill()
-        } else {
-            XCTFail("Wronge URL")
-        }
+    func testAPICallCompleted() throws {
+        let url = URL(string: "https://itunes.apple.com/search?term=musicArtist")
+        let expectation = expectation(description: "Status Code 200")
+        var statusCode: Int?
+        var responseError: Error?
+        session?.dataTask(with: url!, completionHandler: { _, response, error in
+            statusCode = (response as? HTTPURLResponse)?.statusCode
+            responseError = error
+        }).resume()
         wait(for: [expectation], timeout: 5)
+        XCTAssertNil(responseError)
+        XCTAssertEqual(statusCode, 200)
     }
-    
-//    func testAPICallCompleted() throws {
-//        var url = URL(string: "https://itunes.apple.com/search")
-//        let expectation = expectation(description: "Completion handler invoked")
-//        var statusCode: Int?
-//        var responseError: Error?
-//        session?.dataTask(with: url!, completionHandler: { _, response, error in
-//            statusCode = (response as? HTTPURLResponse)?.statusCode
-//            responseError = error
-//            expectation.fulfill()
-//        }).resume()
-//        wait(for: [expectation], timeout: 5)
-//        XCTAssertNil(responseError)
-//        XCTAssertEqual(statusCode, 200)
-//    }
 }
