@@ -52,6 +52,7 @@ class MusicSearch_iTunesAPITests: XCTestCase {
         session?.dataTask(with: url!, completionHandler: { _, response, error in
             statusCode = (response as? HTTPURLResponse)?.statusCode
             responseError = error
+            expectation.fulfill()
         }).resume()
         wait(for: [expectation], timeout: 5)
         XCTAssertNil(responseError)
