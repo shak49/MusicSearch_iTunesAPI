@@ -19,6 +19,7 @@
 		6D24A62626D2F12100504F22 /* MusicSearch_iTunesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A62526D2F12100504F22 /* MusicSearch_iTunesAPITests.swift */; };
 		6D24A62E26D3379900504F22 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A62D26D3379900504F22 /* LoadingView.swift */; };
 		6D24A63026D4135100504F22 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A62F26D4135100504F22 /* DateFormatter.swift */; };
+		6D37200426F4274B000B2061 /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37200326F4274B000B2061 /* URLSessionStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		6D24A62726D2F12100504F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D24A62D26D3379900504F22 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6D24A62F26D4135100504F22 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		6D37200326F4274B000B2061 /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				6D24A59226D0993200504F22 /* NetworkError.swift */,
 				6D24A58F26D0984200504F22 /* iTunesNetworkCall.swift */,
 				6D24A62F26D4135100504F22 /* DateFormatter.swift */,
+				6D37200326F4274B000B2061 /* URLSessionStub.swift */,
 			);
 			path = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				6D24A57D26D04A6700504F22 /* SearchListView.swift in Sources */,
 				6D24A58E26D0957300504F22 /* Results.swift in Sources */,
 				6D24A57B26D04A6700504F22 /* MusicSearch_iTunesAPIApp.swift in Sources */,
+				6D37200426F4274B000B2061 /* URLSessionStub.swift in Sources */,
 				6D24A62E26D3379900504F22 /* LoadingView.swift in Sources */,
 				6D24A5FC26D2CD1E00504F22 /* ResultsController.swift in Sources */,
 				6D24A59326D0993200504F22 /* NetworkError.swift in Sources */,
