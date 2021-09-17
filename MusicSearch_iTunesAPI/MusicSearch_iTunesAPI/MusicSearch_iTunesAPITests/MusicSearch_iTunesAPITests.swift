@@ -13,6 +13,7 @@ class MusicSearch_iTunesAPITests: XCTestCase {
     // Shak notes: Properties
     var session: URLSession?
     var urlBuilder = ResultsController()
+    let networkMonitor = NetworkMonitor.shared
 
     // Shak notes: Lifecycle
     override func setUpWithError() throws {
@@ -27,6 +28,9 @@ class MusicSearch_iTunesAPITests: XCTestCase {
 
     // Shak notes: Functions
     func testValidURL() throws {
+        try XCTSkipUnless(
+          networkMonitor.isReachable,
+          "Network connectivity needed for this test.")
         let url = URL(string: "https://itunes.apple.com/search?term=musicArtist")
         let expectation = expectation(description: "Status Code 200")
         session?.dataTask(with: url!, completionHandler: { _, response, error in

@@ -20,6 +20,7 @@
 		6D24A62E26D3379900504F22 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A62D26D3379900504F22 /* LoadingView.swift */; };
 		6D24A63026D4135100504F22 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A62F26D4135100504F22 /* DateFormatter.swift */; };
 		6D37200426F4274B000B2061 /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37200326F4274B000B2061 /* URLSessionStub.swift */; };
+		6D37200826F4315A000B2061 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37200726F4315A000B2061 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		6D24A62D26D3379900504F22 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6D24A62F26D4135100504F22 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		6D37200326F4274B000B2061 /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
+		6D37200726F4315A000B2061 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				6D24A58F26D0984200504F22 /* iTunesNetworkCall.swift */,
 				6D24A62F26D4135100504F22 /* DateFormatter.swift */,
 				6D37200326F4274B000B2061 /* URLSessionStub.swift */,
+				6D37200726F4315A000B2061 /* NetworkMonitor.swift */,
 			);
 			path = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D37200826F4315A000B2061 /* NetworkMonitor.swift in Sources */,
 				6D24A63026D4135100504F22 /* DateFormatter.swift in Sources */,
 				6D24A59026D0984200504F22 /* iTunesNetworkCall.swift in Sources */,
 				6D24A59826D16D8300504F22 /* songListVM.swift in Sources */,
