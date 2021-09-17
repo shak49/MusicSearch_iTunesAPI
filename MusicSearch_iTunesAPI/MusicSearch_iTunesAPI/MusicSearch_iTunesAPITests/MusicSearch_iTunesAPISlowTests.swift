@@ -9,7 +9,7 @@ import XCTest
 @testable import MusicSearch_iTunesAPI
 
 
-class MusicSearch_iTunesAPITests: XCTestCase {
+class MusicSearch_iTunesAPISlowTests: XCTestCase {
     // Shak notes: Properties
     var session: URLSession?
     var urlBuilder = ResultsController()
